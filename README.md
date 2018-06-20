@@ -1,3 +1,6 @@
+# Full Changes
+https://github.com/neko-pm/panorama_convar_change_list/commit/4a25aa41286f8efdb470e23f994706e44fcd2b0a
+
 # New Commands and ConVars
 Name | Type | Default Value | Flags | Description
 ---- | ---- | ------------- | ----- | -----------
@@ -143,7 +146,7 @@ panorama_loadout_rotate_grab_scale        | convar   | 0.5      | "FCVAR_DEVELOP
 panorama_loadout_rotate_intro_scale       | convar   | 0.5      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 panorama_loadout_rotate_scale             | convar   | 2.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 panorama_play_movie_ambient_sound         | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | 
-player_wargames_list2_7_0_604             | convar   | mg_skirmish_flyingscoutsman,mg_skirmish_armsrace,mg_skirmish_demolition | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | 
+player_wargames_list2_7_0_604             | convar   | mg_skirmish_flyingscoutsman, mg_skirmish_armsrace, mg_skirmish_demolition | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | 
 r_disable_static_prop_loading             | convar   | 0        | "FCVAR_CHEAT"    | If non-zero when a map loads, static props won't be loaded
 scoreboard_use_sf                         | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Use scaleform scoreboard
 snd_mainmenu_music_break_time_max         | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Minimum amount of time to pause between playing main menu music
