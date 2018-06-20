@@ -1,7 +1,11 @@
-# Full Changes
+# panorama_convar_change_list
+### Full Changes
 https://github.com/neko-pm/panorama_convar_change_list/commit/4a25aa41286f8efdb470e23f994706e44fcd2b0a
 
-# New Commands and ConVars
+### Credits
+Information dumped with a slightly modified version of https://github.com/saul/csgo-cvar-unhide
+
+### New Commands and ConVars
 Name | Type | Default Value | Flags | Description
 ---- | ---- | ------------- | ----- | -----------
 @panoram_debug_dead_pad                   | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
