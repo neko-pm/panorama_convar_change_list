@@ -14,7 +14,6 @@ Name | Type | Default Value | Flags | Description
 +campitchup                               | cmd      |  | "FCVAR_CLIENTDLL" | 
 +camyawleft                               | cmd      |  | "FCVAR_CLIENTDLL" | 
 +camyawright                              | cmd      |  | "FCVAR_CLIENTDLL" | 
-+cl_show_team_equipment                   | cmd      |  | "FCVAR_CLIENTDLL" | 
 +commandermousemove                       | cmd      |  | "FCVAR_CLIENTDLL" | 
 +csm_rot_x_neg                            | cmd      |  | "FCVAR_CLIENTDLL" | 
 +csm_rot_x_plus                           | cmd      |  | "FCVAR_CLIENTDLL" | 
@@ -69,7 +68,6 @@ Name | Type | Default Value | Flags | Description
 -campitchup                               | cmd      |  | "FCVAR_CLIENTDLL" | 
 -camyawleft                               | cmd      |  | "FCVAR_CLIENTDLL" | 
 -camyawright                              | cmd      |  | "FCVAR_CLIENTDLL" | 
--cl_show_team_equipment                   | cmd      |  | "FCVAR_CLIENTDLL" | 
 -commandermousemove                       | cmd      |  | "FCVAR_CLIENTDLL" | 
 -csm_rot_x_neg                            | cmd      |  | "FCVAR_CLIENTDLL" | 
 -csm_rot_x_plus                           | cmd      |  | "FCVAR_CLIENTDLL" | 
@@ -110,6 +108,90 @@ Name | Type | Default Value | Flags | Description
 -zoom                                     | cmd      |  | "FCVAR_CLIENTDLL" | 
 -zoom_in                                  | cmd      |  | "FCVAR_CLIENTDLL" | 
 -zoom_out                                 | cmd      |  | "FCVAR_CLIENTDLL" | 
+@panoram_debug_dead_pad                   | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_2d_translate_no_comp_layer      | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_box_shadow_no_comp_layer        | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_cache_command_list_repaint_threshold | convar   | 0.25     | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_cache_command_list_size_threshold | convar   | 2048     | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_clamp_fractional_pixel_positions | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_classes_force_invalidate        | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | Force style invalidation of the entire panel subtree when adding / removing classes.
+@panorama_clear_frames_on_device_restore  | convar   | 2        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_daisy_wheel                     | convar   | ABXY     | "FCVAR_DEVELOPMENTONLY" | Daisy wheel input mode: RS &#124; ABXY
+@panorama_debug_font_selection            | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_debug_movies                    | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_debug_overlay_opacity           | convar   | 0.8      | "FCVAR_ARCHIVE"  | 
+@panorama_disable_blur                    | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_disable_box_shadow              | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_disable_descendant_filtering    | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | Disable descendant selector filtering
+@panorama_disable_draw_fancy_quad         | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_disable_draw_text               | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_disable_draw_text_shadow        | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_disable_layer_cache             | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_disable_layer_clear             | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_disable_outershadow_layer_cache | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_disable_render_callbacks        | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_disable_render_target_cache     | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_dragscroll_affordance           | convar   | 20       | "FCVAR_DEVELOPMENTONLY" | Minimum mouse movement in pixels before a move is treated as a drag scroll
+@panorama_dragscroll_affordance_vr        | convar   | 100      | "FCVAR_DEVELOPMENTONLY" | Minimum mouse movement in pixels before a move is treated as a drag scroll in VR
+@panorama_dragscroll_maxflickvelocity     | convar   | 8000     | "FCVAR_DEVELOPMENTONLY" | Maximum velocity for a drag scroll flick
+@panorama_dragscroll_maxflickvelocity_vr  | convar   | 8000     | "FCVAR_DEVELOPMENTONLY" | Maximum velocity for a drag scroll flick in VR
+@panorama_dragscroll_minflickvelocity     | convar   | 60       | "FCVAR_DEVELOPMENTONLY" | Minimum velocity that the mouse must be moving as mouse up time to qualify as a drag scroll flick
+@panorama_dragscroll_minflickvelocity_vr  | convar   | 240      | "FCVAR_DEVELOPMENTONLY" | Minimum velocity that the mouse must be moving as mouse up time to qualify as a drag scroll flick in VR
+@panorama_dragscroll_mintime              | convar   | 0.02     | "FCVAR_DEVELOPMENTONLY" | Minimum time that the mouse button must be down before a move is treated as a drag scroll
+@panorama_dragscroll_mintime_vr           | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY" | Minimum time that the mouse button must be down before a move is treated as a drag scroll in VR
+@panorama_dragscroll_velocitymultiplier   | convar   | 0.5      | "FCVAR_DEVELOPMENTONLY" | Multiplier for flick velocity off of actual measured velocity
+@panorama_dragscroll_velocitymultiplier_vr | convar   | 0.5      | "FCVAR_DEVELOPMENTONLY" | Multiplier for flick velocity off of actual measured velocity
+@panorama_enable_motion_blur              | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_experimental_overdraw_prevention | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_fbo_alloc_batch                 | convar   | 10       | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_flush_buffers                   | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_force_fast_text_shadow          | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_force_sort_child_ops            | convar   | 0        | "FCVAR_CHEAT"    | 
+@panorama_highlight_composition_layers    | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_input_debug_info                | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_joystick_axis_repeat_curve_time | convar   | 1.0      | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_joystick_axis_repeat_interval_end | convar   | 0.05     | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_joystick_axis_repeat_interval_start | convar   | 0.22     | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_joystick_button_repeat_curve_time | convar   | 1.2      | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_joystick_button_repeat_interval_end | convar   | 0.10     | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_joystick_button_repeat_interval_start | convar   | 0.48     | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_keep_panel_in_layer_cache       | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_keep_text_in_font_cache         | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_large_dispatch_event_queue      | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_max_fps                         | convar   | 120.0f   | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_max_free_fbo                    | convar   | 1000     | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_max_oof_overlay_up_fps          | convar   | 4.0f     | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_max_overlay_fps                 | convar   | 60.0f    | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_might_scroll_no_comp_layer      | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_min_comp_layer_cache_cost       | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_motion_blur_velocity_scale      | convar   | 0.04     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_reload_animations               | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_render_stats                    | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_render_stats_posx               | convar   | 50       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_render_stats_posy               | convar   | 500      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_render_target_cache_max_size    | convar   | 31457280 | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_repaint_watch_id                | convar   |          | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_show_fps                        | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_simple_borders_no_comp_layer    | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_sound_pos                       | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_sound_pos_dist                  | convar   | 2.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_sound_pos_show                  | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_spew_layout_invalidates         | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_steampad_button_repeat_curve_time | convar   | .5       | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_steampad_button_repeat_interval_end | convar   | 0.035    | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_steampad_button_repeat_interval_start | convar   | .7       | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_style_flag_force_invalidate     | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | Force style invalidation of the entire panel subtree when adding / removing style flags.
+@panorama_suspend_paint                   | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_track_render_commands           | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_transform_parents_no_layer_for_perspective | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_transforms_no_comp_layer        | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_transition_time_factor          | convar   | 1.0      | "FCVAR_DEVELOPMENTONLY" | A float representing a scale factor for transitions. 1.0 is normal, 2.0 would be twice as fast as normal, 0.5 half as fast
+@panorama_use_backbuffer_directly         | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_volume_ambient                  | convar   | 0.48f    | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_volume_effects                  | convar   | 1.0f     | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_volume_master                   | convar   | 1.0f     | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_volume_movies                   | convar   | 1.0f     | "FCVAR_DEVELOPMENTONLY" | 
+@panorama_vsync                           | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | 
 BindToggle                                | cmd      |  |                  | Performs a bind <key> "increment var <cvar> 0 1 1"
 BlendBonesMode                            | convar   | 2        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_REPLICATED" | 
 CS_WarnFriendlyDamageInterval             | convar   | 3.0      | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Defines how frequently the server notifies clients that a player damaged a friend
@@ -566,7 +648,6 @@ cl_burninggibs                            | convar   | 0        | "FCVAR_DEVELOP
 cl_cam_driver_compensation_scale          | convar   | 0.75     | "FCVAR_CLIENTDLL", "FCVAR_RELEASE" | 
 cl_camera_follow_bone_index               | convar   | -2       | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Index of the bone to follow.  -2 == disabled.  -1 == root bone.  0+ is bone index.
 cl_camera_height_restriction_debug        | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_REPLICATED", "FCVAR_CHEAT" | 
-cl_cameraman_override_messages            | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_RELEASE" | Show messages indicating secondary cameraman override
 cl_chat_active                            | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_chatfilter_version                     | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_HIDDEN", "FCVAR_ARCHIVE" | Stores the chat filter version
 cl_chatfilters                            | convar   | 63       | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Stores the chat filter settings 
@@ -676,7 +757,6 @@ cl_csm_xlat_continuity                    | convar   | 1        | "FCVAR_DEVELOP
 cl_custom_material_override               | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | allow custom material override
 cl_custommaterial_debug_graph             | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
 cl_customsounds                           | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Enable customized player sound playback
-cl_deathnotices_show_numbers              | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_RELEASE" | 0: default; 1: draw names as just numbers; 2: append number on killer and victim to the name
 cl_debug_client_gamestats                 | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_debug_round_stat_submission            | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_debug_ugc_downloads                    | convar   | 0        | "FCVAR_RELEASE"  | 
@@ -696,7 +776,6 @@ cl_disable_splitscreen_cpu_level_cfgs_in_pip | convar   | 1        | "FCVAR_DEVE
 cl_disable_water_render_targets           | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_disablefreezecam                       | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Turn on/off freezecam on client
 cl_disablehtmlmotd                        | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Disable HTML motds.
-cl_display_scaleform_achievement_popups   | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_dm_buyrandomweapons                    | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | Player will automatically receive a random weapon on spawn in deathmatch if this is set to 1 (otherwise, they will receive the last weapon)
 cl_download_demoplayer                    | convar   | 1        | "FCVAR_RELEASE"  | Determines whether downloads of external resources are allowed during demo playback (0:no,1:workshop,2:all)
 cl_downloadfilter                         | convar   | all      | "FCVAR_ARCHIVE"  | Determines which files can be downloaded from the server (all, none, nosounds)
@@ -760,10 +839,9 @@ cl_interp_npcs                            | convar   | 0.0      | "FCVAR_DEVELOP
 cl_interp_ratio                           | convar   | 2.0      | "FCVAR_CLIENTDLL", "FCVAR_USERINFO", "FCVAR_NOT_CONNECTED" | Sets the interpolation amount (final amount is cl_interp_ratio / cl_updaterate).
 cl_interp_watch                           | convar   | -2       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_interpolate                            | convar   | 1        | "FCVAR_RELEASE"  | Enables or disables interpolation on listen servers or during demo playback
-cl_inv_showdividerline                    | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS" | If 1, will show a divider line above the grenades in the inventory panel.
+cl_inventory_debug_tooltip                | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_RELEASE" | 
 cl_inventory_saved_filter2                | convar   | all      | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 cl_inventory_saved_sort2                  | convar   | inv_sort_age | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
-cl_invitation_pending                     | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_HIDDEN" | 
 cl_jiggle_bone_debug                      | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Display physics-based 'jiggle bone' debugging information
 cl_jiggle_bone_debug_pitch_constraints    | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Display physics-based 'jiggle bone' debugging information
 cl_jiggle_bone_debug_yaw_constraints      | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Display physics-based 'jiggle bone' debugging information
@@ -776,7 +854,6 @@ cl_language                               | convar   | english  | "FCVAR_DEVELOP
 cl_leafsystemvis                          | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
 cl_leveloverview                          | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
 cl_leveloverviewmarker                    | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
-cl_loadout_colorweaponnames               | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | If set to true, the weapon names are colored in the weapon loadout to match their rarity.
 cl_mainmenu_blog_file                     | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_HIDDEN", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Load blog file
 cl_mainmenu_blog_file_cache               | convar   | blogfilecache.txt | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_HIDDEN" | Location of the cached blog file
 cl_mainmenu_hide_blog                     | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_HIDDEN", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Show the news panel and hide blog
@@ -792,7 +869,8 @@ cl_minmodels                              | convar   | 0        | "FCVAR_DEVELOP
 cl_modelfastpath                          | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_modemanager_reload                     | cmd      |  | "FCVAR_CLIENTDLL" | Reloads the panel metaclasses for vgui screens.
 cl_motd_competitive_timeout               | convar   | 80       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Competitive motd timeout in seconds.
-cl_mouseenable                            | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_RELEASE" | 
+cl_mouseenable                            | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+cl_mouseenable_buttons                    | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_mouselook                              | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_NOT_CONNECTED" | Set to 1 to use mouse for look, 0 for keyboard look. Cannot be set while connected to a server.
 cl_mute_all_but_friends_and_party         | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Only allow communication from friends and matchmaking party members. Doesn't apply to competitive matchmaking games.
 cl_mute_enemy_team                        | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Block all communication from players on the enemy team.
@@ -808,7 +886,6 @@ cl_obs_interp_snap_dist                   | convar   | 1        | "FCVAR_DEVELOP
 cl_obs_interp_turn_to_face_end_frac       | convar   | 0.65     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_obs_interp_turn_to_face_start_frac     | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_observercrosshair                      | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS" | 
-cl_operation_premium_reminder_op08        | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | 
 cl_overdraw_test                          | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_NEVER_AS_STRING", "FCVAR_CHEAT" | 
 cl_panelanimation                         | cmd      |  | "FCVAR_CLIENTDLL" | Shows panel animation variables: <panelname &#124; blank for all panels>.
 cl_particle_batch_mode                    | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
@@ -942,13 +1019,12 @@ cl_spec_use_tournament_content_standards  | convar   | 0.0      | "FCVAR_CLIENTD
 cl_sporeclipdistance                      | convar   | 512      | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
 cl_ss_origin                              | cmd      |  | "FCVAR_CLIENTDLL" | print origin in script format
 cl_steamscreenshots                       | cmd      |  | "FCVAR_CLIENTDLL" | Enable/disable saving screenshots to Steam
-cl_streams_image_sfurl                    | convar   | img://loadjpeg:(320x200): | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Format of Scaleform image representing the stream
+cl_streams_image_sfurl                    | convar   | img://loadjpeg:(640x360): | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Format of Scaleform image representing the stream
 cl_streams_mytwitchtv_channel             | convar   | http://www.twitch.tv/ | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Twitch.tv account channel URL
 cl_streams_mytwitchtv_nolink              | convar   | http://www.twitch.tv/settings/connections | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Twitch.tv account linking URL
 cl_streams_override_global_version        | convar   |          | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | When set will override global API version
 cl_streams_refresh_interval               | convar   | 300      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | How often to refresh streams list
 cl_streams_request_accept                 | convar   | application/vnd.twitchtv.v3+json | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Header for api request
-cl_streams_request_count                  | convar   | 6        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | How many streams are displayed in main menu
 cl_streams_request_url                    | convar   | https://api.twitch.tv/kraken/streams?game=Counter-Strike%3A%20Global%20Offensive&limit=12 | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Number of streams requested for display
 cl_streams_write_response_file            | convar   |          | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | When set will save streams info file for diagnostics
 cl_sun_decay_rate                         | convar   | 0.05     | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
@@ -960,17 +1036,12 @@ cl_teamid_min                             | convar   | 200      | "FCVAR_DEVELOP
 cl_teamid_overhead_always                 | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | Always show team id over teammates. 1 = pips; 2 = pips, name, and equipment
 cl_teamid_overhead_maxdist                | convar   | 3000     | "FCVAR_CLIENTDLL", "FCVAR_CHEAT", "FCVAR_SS" | max distance at which the overhead team id icons will show
 cl_teamid_overhead_maxdist_spec           | convar   | 2000     | "FCVAR_CLIENTDLL", "FCVAR_CHEAT", "FCVAR_SS" | max distance at which the overhead team id icons will show when a spectator
-cl_teamid_overhead_name_alpha             | convar   | 100      | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS" | The max alpha the overhead ID names will draw as.
-cl_teamid_overhead_name_fadetime          | convar   | 1.0      | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS" | How long it takes for the overhad name to fade out once your crosshair has left the target.
-cl_teammate_color_1                       | convar   | 240 243 32 | "FCVAR_DEVELOPMENTONLY" | 
-cl_teammate_color_2                       | convar   | 150 34 223 | "FCVAR_DEVELOPMENTONLY" | 
-cl_teammate_color_3                       | convar   | 0 165 90 | "FCVAR_DEVELOPMENTONLY" | 
+cl_teammate_color_1                       | convar   | 248 246 45 | "FCVAR_DEVELOPMENTONLY" | 
+cl_teammate_color_2                       | convar   | 161 25 240 | "FCVAR_DEVELOPMENTONLY" | 
+cl_teammate_color_3                       | convar   | 0 181 98 | "FCVAR_DEVELOPMENTONLY" | 
 cl_teammate_color_4                       | convar   | 92 168 255 | "FCVAR_DEVELOPMENTONLY" | 
 cl_teammate_color_5                       | convar   | 255 155 37 | "FCVAR_DEVELOPMENTONLY" | 
 cl_teammate_colors_show                   | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | In competitive, 1 = show teammates as separate colors in the radar, scoreboard, etc., 2 = show colors and letters
-cl_test_calibration                       | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
-cl_test_data_center_token                 | convar   |          | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | When sending ping times to GC, ask GC to only use this data center token.  Token may be specified as dotted-decimal IP, known SDR data center code, or any other arbitrary 3- or 4- character string used as a secret key.
-cl_test_vote_scroll                       | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_thirdperson                            | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_NOT_CONNECTED" | Enables/Disables third person
 cl_threaded_bone_setup                    | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_RELEASE" | Enable parallel processing of bones
 cl_threaded_init                          | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
@@ -984,6 +1055,7 @@ cl_tree_sway_dir                          | cmd      |  | "FCVAR_CLIENTDLL" | se
 cl_updaterate                             | convar   | 64       | "FCVAR_ARCHIVE", "FCVAR_USERINFO", "FCVAR_NOT_CONNECTED" | Number of packets per second of updates you are requesting from the server
 cl_updatevisibility                       | cmd      |  | "FCVAR_CLIENTDLL" | Updates visibility bits.
 cl_upspeed                                | convar   | 320      | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
+cl_use_entity_as_targetid                 | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_use_hostage_ik                         | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_use_new_headbob                        | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
 cl_use_old_wearable_shoulddraw            | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
@@ -995,15 +1067,12 @@ cl_viewmodel_shift_right_amt              | convar   | 0.75     | "FCVAR_CLIENTD
 cl_voice_buffer_time                      | convar   | 0.04     | "FCVAR_DEVELOPMENTONLY" | Amount of time between receiving voice data and playing the audio
 cl_voice_filter                           | convar   |          | "FCVAR_DEVELOPMENTONLY" | Filter voice by name substring
 cl_voice_hltv_buffer_time                 | convar   | 0.3      | "FCVAR_DEVELOPMENTONLY" | Amount of time between receiving voice data and playing the audio in hltv
-cl_vote_ui_active_after_voting            | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
-cl_vote_ui_show_notification              | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 cl_weapon_clip_thinwalls                  | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_REPLICATED", "FCVAR_CHEAT" | 
 cl_weapon_clip_thinwalls_debug            | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_REPLICATED", "FCVAR_CHEAT" | 
 cl_weapon_clip_thinwalls_lock             | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_REPLICATED", "FCVAR_CHEAT" | 
 cl_weapon_debug_print_accuracy            | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT", "FCVAR_RELEASE" | 
 cl_weapon_debug_show_accuracy             | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT", "FCVAR_RELEASE" | Draws a circle representing the effective range with every shot.
 cl_weapon_debug_show_accuracy_duration    | convar   | 10       | "FCVAR_CLIENTDLL", "FCVAR_CHEAT", "FCVAR_RELEASE" | 
-cl_weapons_expert_buymenu_pips            | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_RELEASE" | Show user pips in buymenu. 0 = never, 1 = in tooltip, 2 = always
 cl_winddir                                | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Weather effects wind direction angle
 cl_windspeed                              | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Weather effects wind speed scalar
 cl_wpn_sway_interp                        | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
@@ -1059,6 +1128,7 @@ confirm_watch_friend_session_exit_current | cmd      |  | "FCVAR_CLIENTDLL", "FC
 connect                                   | cmd      |  | "FCVAR_DONTRECORD" | Connect to specified server.
 connect_lobby                             | convar   |          | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_HIDDEN" | Sets the lobby ID to connect to on start.
 connect_splitscreen                       | cmd      |  | "FCVAR_HIDDEN", "FCVAR_DONTRECORD", "FCVAR_RELEASE" | Connect to specified server. With multiple players.
+console_history_size                      | convar   | 1000     | "FCVAR_DEVELOPMENTONLY" | 
 console_window_open                       | convar   |          | "FCVAR_DEVELOPMENTONLY", "FCVAR_HIDDEN" | Is the console window active
 contimes                                  | convar   | 8        | "FCVAR_DEVELOPMENTONLY", "FCVAR_MATERIAL_SYSTEM_THREAD" | Number of console lines to overlay for debugging.
 contributionscore_assist                  | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | amount of contribution score added for an assist
@@ -1090,13 +1160,9 @@ cs_hostage_near_rescue_music_distance     | convar   | 2000     | "FCVAR_GAMEDLL
 cs_make_vip                               | cmd      |  | "FCVAR_GAMEDLL"  | Marks a player as the VIP
 csgo_download_match                       | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_DONTRECORD", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Downloads a match via serial code and starts playback
 csgo_econ_action_preview                  | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_HIDDEN", "FCVAR_DONTRECORD", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Preview an economy item
-csgo_html_zoom                            | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Scaling method for HTML displays (0=Bilinear Texture Scaling, 1=CEF Pixel Accurate Zoom)
-csgo_html_zoom_override                   | convar   | 99.0     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 csm_quality_level                         | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | Cascaded shadow map quality level, [0,3], 0=VERY_LOW, 3=HIGHEST
-csm_quality_level_detail                  | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Tracks whether a user has received a notification message during this instance of the game.
 csm_quality_level_optionsui               | convar   | 9999999  | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Used to set video property from options UI.
 csm_quality_level_restart                 | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Used to set video property at device reset.
-cursortimeout                             | convar   | 60.0     | "FCVAR_ARCHIVE"  | Seconds before mouse cursor hides itself due to inactivity
 custom_bot_difficulty                     | convar   | 0        | "FCVAR_GAMEDLL", "FCVAR_CLIENTDLL", "FCVAR_REPLICATED", "FCVAR_RELEASE" | Bot difficulty for offline play.
 cvarlist                                  | cmd      |  |                  | Show the list of convars/concommands.
 damage_impact_heavy                       | convar   | 40       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Damage ABOVE this value is considered heavy damage
@@ -1110,6 +1176,8 @@ dbghist_dump                              | cmd      |  | "FCVAR_GAMEDLL"  | Dum
 deathmatch                                | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_NOTIFY" | Running a deathmatch server.
 debug_aim_angle                           | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_REPLICATED" | 
 debug_dispatch_server_dump                | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | 
+debug_drawbox                             | cmd      |  | "FCVAR_CHEAT"    | Create debug box
+debug_drawdisp_boundbox                   | cmd      |  | "FCVAR_CHEAT"    | Create debug boxes for invalid displacements
 debug_map_crc                             | convar   | 0        | "FCVAR_RELEASE"  | Prints CRC for each map lump loaded
 debug_materialmodifycontrol               | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | 
 debug_materialmodifycontrol_client        | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
@@ -1117,13 +1185,10 @@ debug_overlay_fullposition                | convar   | 0        | "FCVAR_DEVELOP
 debug_paint_alpha                         | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
 debug_physimpact                          | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | 
 debug_purchase_defidx                     | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_RELEASE", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Purchase an item by defindex
-debug_show_scoreboard_coin_status         | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Shows coin data for players in teh scoreboard (for debugging)
 debug_touchlinks                          | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | Spew touch link activity
 debug_visibility_monitor                  | convar   | 0        | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | 
 debugsystemui                             | cmd      |  | "FCVAR_CHEAT"    | Show/hide the debug system UI.
 default_fov                               | convar   | 90       | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
-defaultres_restart                        | convar   | -1       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Used to set video property at device reset.
-defaultresheight_restart                  | convar   | -1       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Used to set video property at device reset.
 demo_avellimit                            | convar   | 2000     | "FCVAR_DEVELOPMENTONLY" | Angular velocity limit before eyes considered snapped for demo playback.
 demo_connect_string                       | convar   |          | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Connect string for demo UI
 demo_debug                                | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | Demo debug info.
@@ -1155,18 +1220,12 @@ demo_ui_enable                            | convar   |          | "FCVAR_DEVELOP
 demolist                                  | cmd      |  |                  | Print demo sequence list.
 demos                                     | cmd      |  |                  | Demo demo file sequence.
 demoui                                    | cmd      |  | "FCVAR_DONTRECORD" | Show/hide the demo player UI.
-devCheatSkipInputLocking                  | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | skips locking of input when joining game with multiple controllers
 dev_force_selected_device                 | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
 dev_reportmoneychanges                    | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL", "FCVAR_REPLICATED" | Displays money account changes for players in the console
-dev_scaleform_debug                       | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
-dev_scaleform_verbose_off                 | cmd      |  | "FCVAR_DEVELOPMENTONLY", "FCVAR_DONTRECORD" | Disable Scaleform verbose mode.
-dev_scaleform_verbose_on                  | cmd      |  | "FCVAR_DEVELOPMENTONLY", "FCVAR_DONTRECORD" | Enable Scaleform verbose mode.
-dev_scaleform_verbose_toggle              | cmd      |  | "FCVAR_DEVELOPMENTONLY", "FCVAR_DONTRECORD" | Enable/disable Scaleform verbose mode.
 developer                                 | convar   | 0        | "FCVAR_RELEASE", "FCVAR_MATERIAL_SYSTEM_THREAD" | Set developer message level
 devshots_nextmap                          | cmd      |  |                  | Used by the devshots system to go to the next map in the devshots maplist.
 devshots_screenshot                       | cmd      |  | "FCVAR_DONTRECORD" | Used by the -makedevshots system to take a screenshot. For taking your own screenshots, use the 'screenshot' command instead.
 differences                               | cmd      |  |                  | Show all convars which are not at their default values.
-disable_static_prop_loading               | convar   | 0        | "FCVAR_CHEAT"    | If non-zero when a map loads, static props won't be loaded
 disconnect                                | cmd      |  | "FCVAR_SERVER_CAN_EXECUTE" | Disconnect game from server.
 disp_dynamic                              | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
 disp_list_all_collideable                 | cmd      |  |                  | List all collideable displacements
@@ -1214,6 +1273,11 @@ dtwatchent                                | convar   | -1       | "FCVAR_DEVELOP
 dtwatchvar                                | convar   |          | "FCVAR_DEVELOPMENTONLY" | Watch the named variable.
 dump_entity_sizes                         | cmd      |  | "FCVAR_GAMEDLL"  | Print sizeof(entclass)
 dump_globals                              | cmd      |  | "FCVAR_GAMEDLL"  | Dump all global entities/states
+dump_panorama_css_properties              | cmd      |  |                  | Prints out all valid panorama CSS properties and their documentation
+dump_panorama_css_properties_memstats     | cmd      |  |                  | Prints out mem stats of all valid panorama CSS properties
+dump_panorama_events                      | cmd      |  |                  | print panorama event types and their documentation
+dump_panorama_js_scopes                   | cmd      |  |                  | print panorama js scopes, such as classes, and their associated methods. (wiki table format)
+dump_panorama_render_command_stats        | cmd      |  |                  | 
 dump_particlemanifest                     | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Dump the list of particles loaded.
 dumpentityfactories                       | cmd      |  | "FCVAR_GAMEDLL"  | Lists all entity factory names.
 dumpeventqueue                            | cmd      |  | "FCVAR_GAMEDLL"  | Dump the contents of the Entity I/O event queue to the console.
@@ -1224,7 +1288,6 @@ econ_build_pinboard_images_from_collection_name | cmd      |  | "FCVAR_CLIENTDLL
 econ_clear_inventory_images               | cmd      |  | "FCVAR_CLIENTDLL" | clear the local inventory images (they will regenerate)
 econ_debug_loadout_ui                     | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Show debug data when players change their loadout.
 econ_enable_inventory_images              | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | allow inventory image rendering for use by scaleform
-econ_highest_baseitem_seen                | convar   | 59       | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 econ_inventory_image_pinboard             | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 econ_never_show_items_in_cart_count       | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 econ_show_items_with_tag                  | cmd      |  | "FCVAR_CLIENTDLL" | Lists the item definitions that have a specified tag.
@@ -1349,13 +1412,14 @@ fog_volume_debug                          | convar   | 0        | "FCVAR_DEVELOP
 fogui                                     | cmd      |  | "FCVAR_DONTRECORD" | Show/hide fog control UI.
 force_audio_english                       | convar   | 0        | "FCVAR_ARCHIVE", "FCVAR_ARCHIVE_XBOX" | Keeps track of whether we're forcing english in a localized language.
 force_centerview                          | cmd      |  | "FCVAR_CLIENTDLL" | 
+forceactivecontrollertype                 | convar   | -1       | "FCVAR_DEVELOPMENTONLY" | 
 forcebind                                 | cmd      |  |                  | Bind a command to an available key. (forcebind command opt:suggestedKey)
 foundry_engine_get_mouse_control          | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Give the engine control of the mouse.
 foundry_engine_release_mouse_control      | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Give the control of the mouse back to Hammer.
 foundry_select_entity                     | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Select the entity under the crosshair or select entities with the specified name.
 foundry_sync_hammer_view                  | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Move Hammer's 3D view to the same position as the engine's 3D view.
 foundry_update_entity                     | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Updates the entity's position/angles when in edit mode
-fov_cs_debug                              | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_REPLICATED", "FCVAR_CHEAT" | Sets the view fov if cheats are on.
+fov_cs_debug                              | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Sets the view fov if cheats are on.
 fps_max                                   | convar   | 300      | "FCVAR_RELEASE"  | Frame rate limiter
 fps_max_menu                              | convar   | 120      | "FCVAR_RELEASE"  | Frame rate limiter, main menu
 fps_max_splitscreen                       | convar   | 300      | "FCVAR_DEVELOPMENTONLY" | Frame rate limiter, splitscreen
@@ -1378,7 +1442,6 @@ fs_report_sync_opens_callstack            | convar   | 0        | "FCVAR_DEVELOP
 fs_syncdvddevcache                        | cmd      |  |                  | Force the 360 to get updated files that are in your p4 changelist(s) from the host PC when running with -dvddev.
 fs_warning_level                          | cmd      |  |                  | Set the filesystem warning level.
 fs_warning_mode                           | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 0:Off, 1:Warn main thread, 2:Warn other threads
-fullscreen_restart                        | convar   | -1       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Used to set video property at device reset.
 func_break_max_pieces                     | convar   | 15       | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_REPLICATED" | 
 func_break_reduction_factor               | convar   | .5       | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | 
 func_breakdmg_bullet                      | convar   | 0.5      | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | 
@@ -1517,12 +1580,15 @@ hostfile                                  | convar   | host.txt | "FCVAR_GAMEDLL
 hostip                                    | convar   |          | "FCVAR_RELEASE"  | Host game server ip
 hostname                                  | convar   |          | "FCVAR_RELEASE"  | Hostname for server.
 hostport                                  | convar   | 27015    | "FCVAR_RELEASE"  | Host game server port
+http_cache_size                           | convar   | 150      | "FCVAR_DEVELOPMENTONLY" | 
+hud_alt_ticks                             | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 hud_autoreloadscript                      | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Automatically reloads the animation script each time one is ran
+hud_dump_altticks                         | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | List HUD elements and their alt_tick usage
 hud_fastswitch                            | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_SS" | 
 hud_jeephint_numentries                   | convar   | 10       | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | 
 hud_reloadscheme                          | cmd      |  | "FCVAR_CLIENTDLL" | Reloads hud layout and animation scripts.
 hud_saytext_time                          | convar   | 12       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
-hud_scaling                               | convar   | 0.85     | "FCVAR_ARCHIVE"  | Scales hud elements
+hud_scaling                               | convar   | 0.85     | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Scales hud elements
 hud_showtargetid                          | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS" | Enables display of target names
 hud_subtitles                             | cmd      |  | "FCVAR_CLIENTDLL" | Plays the Subtitles: <filename>
 hud_takesshots                            | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Auto-save a scoreboard screenshot at the end of a map.
@@ -1530,6 +1596,9 @@ hunk_print_allocations                    | cmd      |  | "FCVAR_CLIENTCMD_CAN_E
 hunk_track_allocation_types               | convar   | 1        | "FCVAR_CHEAT"    | 
 hurtme                                    | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Hurts the player. 	Arguments: <health to lose>
 ignore_ui_activate_key                    | convar   |          | "FCVAR_DEVELOPMENTONLY", "FCVAR_HIDDEN" | When set will ignore UI activation key
+ime_hkl_info                              | cmd      |  | "FCVAR_DONTRECORD" | Spew IME HKL info.
+ime_info                                  | cmd      |  | "FCVAR_DONTRECORD" | Spew IME info.
+ime_supported_info                        | cmd      |  | "FCVAR_DONTRECORD" | Spew IME Supported info.
 impulse                                   | cmd      |  | "FCVAR_CLIENTDLL" | 
 in_forceuser                              | convar   | 0        | "FCVAR_CHEAT"    | Force user input to this split screen player.
 in_usekeyboardsampletime                  | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Use keyboard sample time smoothing.
@@ -1645,7 +1714,6 @@ joystick_force_disabled_set_from_options  | convar   | 1        | "FCVAR_CLIENTD
 jpeg                                      | cmd      |  |                  | Take a jpeg screenshot:  jpeg <filename> <quality 1-100>.
 jpeg_quality                              | convar   | 90       | "FCVAR_DEVELOPMENTONLY" | jpeg screenshot quality.
 kdtree_test                               | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Tests spatial partition for entities queries.
-key_bind_version                          | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_HIDDEN", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 key_findbinding                           | cmd      |  |                  | Find key bound to specified command string.
 key_listboundkeys                         | cmd      |  |                  | List bound keys with bindings.
 key_updatelayout                          | cmd      |  |                  | Updates game keyboard layout to current windows keyboard setting.
@@ -1657,6 +1725,7 @@ killserver                                | cmd      |  |                  | Shu
 killvector                                | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_PRINTABLEONLY" | Kills a player applying force. Usage: killvector <player> <x value> <y value> <z value>
 knife_damage_scale                        | convar   | 100      | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | 
 lastinv                                   | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_SERVER_CAN_EXECUTE" | 
+launch_warmup_map                         | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_DONTRECORD", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Launches warmup map
 light_crosshair                           | cmd      |  | "FCVAR_CHEAT"    | Show texture color at crosshair
 lightcache_maxmiss                        | convar   | 2        | "FCVAR_CHEAT"    | 
 lightprobe                                | cmd      |  |                  | Samples the lighting environment. Creates a cubemap and a file indicating the local lighting in a subdirectory called 'materials/lightprobes' .The lightprobe command requires you specify a base file name. 
@@ -1677,11 +1746,8 @@ loader_spew_info                          | convar   | 0        | "FCVAR_DEVELOP
 loader_throttle_io                        | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | 
 lobby_default_privacy_bits1               | convar   | 6        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | Lobby default permissions (0: private, 1: public, 2: clan, 4: nearby, 6: clan and nearby)
 lobby_gamesearch_fake                     | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
-lobby_minplayers_fiveplayerlobby          | convar   | 5        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
-lobby_minplayers_tenplayerlobby           | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 lobby_spew_friend_info                    | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 lobby_stats_fake                          | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
-lobby_voice_chat_enabled                  | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | Lobby microphone is enabled when this is set to 1
 localization_quest_item_string_printout   | cmd      |  | "FCVAR_CLIENTDLL" | localization_quest_item_string_printout
 locator_background_border_color           | convar   | 16 16 16 0 | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | The default color for the border.
 locator_background_border_thickness       | convar   | 2        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | How many pixels the background borders the left and right.
@@ -1721,10 +1787,6 @@ logaddress_delall_http                    | cmd      |  | "FCVAR_GAMEDLL", "FCVA
 logaddress_list                           | cmd      |  |                  | List all addresses currently being used by logaddress.
 logaddress_list_http                      | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_UNLOGGED", "FCVAR_RELEASE" | List all URIs currently receiving server logs
 logaddress_token_secret                   | convar   |          | "FCVAR_RELEASE"  | Set a secret string that will be hashed when using logaddress with explicit token hash.
-loginlicenseassist_haslicense_pw          | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_HIDDEN", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Take user to buy a Perfect World license
-loginlicenseassist_pw_completeaccountinfo | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_HIDDEN", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Take user to complete Perfect World account info
-loginlicenseassist_pw_needtobuylicense    | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_HIDDEN", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Take user to buy a Steam license
-loginlicenseassist_pw_needtolinkaccounts  | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_HIDDEN", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Take user to link a Perfect World account
 lookspring                                | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | 
 lookstrafe                                | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | 
 loopsingleplayermaps                      | convar   | 0        | "FCVAR_GAMEDLL", "FCVAR_REPLICATED", "FCVAR_CHEAT" | 
@@ -1833,6 +1895,7 @@ mat_dof_quality                           | convar   | 0        | "FCVAR_DEVELOP
 mat_drawTexture                           | convar   |          | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Enable debug view texture
 mat_drawTextureScale                      | convar   | 1.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Debug view texture scale
 mat_drawTitleSafe                         | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | Enable title safe overlay
+mat_draw_resolution                       | convar   | 0        | "FCVAR_CHEAT"    | 
 mat_drawflat                              | convar   | 0        | "FCVAR_CHEAT"    | 
 mat_drawgray                              | convar   | 0        | "FCVAR_CHEAT"    | 
 mat_drawwater                             | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
@@ -1854,6 +1917,8 @@ mat_fastspecular                          | convar   | 1        | "FCVAR_DEVELOP
 mat_fillrate                              | convar   | 0        | "FCVAR_CHEAT"    | 
 mat_filterlightmaps                       | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | 
 mat_filtertextures                        | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | 
+mat_flashlight_shadow_decal_indirectcolour_amount | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY", "FCVAR_MATERIAL_SYSTEM_THREAD" | 
+mat_flashlight_shadow_decal_max_alpha     | convar   | 0.2      | "FCVAR_DEVELOPMENTONLY", "FCVAR_MATERIAL_SYSTEM_THREAD" | 
 mat_force_bloom                           | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
 mat_force_tonemap_min_avglum              | convar   | -1       | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Override. Old default was 3.0
 mat_force_tonemap_percent_bright_pixels   | convar   | -1       | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Override. Old value was 2.0
@@ -1914,8 +1979,6 @@ mat_monitorgamma_tv_range_min             | convar   | 16       | "FCVAR_DEVELOP
 mat_monitorgamma_vganonpwlgamma           | convar   | 2.2      | "FCVAR_DEVELOPMENTONLY", "FCVAR_MATERIAL_SYSTEM_THREAD" | 
 mat_morphstats                            | convar   | 0        | "FCVAR_CHEAT"    | 
 mat_motion_blur_enabled                   | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
-mat_motion_blur_enabled_detail            | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Tracks whether a user has received a notification message during this instance of the game.
-mat_motion_blur_enabled_restart           | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Used to set video property at device reset.
 mat_motion_blur_falling_intensity         | convar   | 1.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 mat_motion_blur_falling_max               | convar   | 20.0     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 mat_motion_blur_falling_min               | convar   | 10.0     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
@@ -1947,7 +2010,6 @@ mat_processtoolvars                       | convar   | 0        | "FCVAR_DEVELOP
 mat_proxy                                 | convar   | 0        | "FCVAR_CHEAT"    | 
 mat_queue_mode                            | convar   | -1       | "FCVAR_RELEASE"  | The queue/thread mode the material system should use: -1=default, 0=synchronous single thread, 1=queued single thread, 2=queued multithreaded
 mat_queue_mode_force_allow                | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | Whether QMS can be enabled on single threaded CPU
-mat_queue_mode_restart                    | convar   | -1       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Used to set video property at device reset.
 mat_queue_priority                        | convar   | 1        | "FCVAR_RELEASE"  | 
 mat_queue_report                          | convar   | 0        | "FCVAR_ARCHIVE"  | Report thread stalls.  Positive number will filter by stalls >= time in ms.  -1 reports all locks.
 mat_reducefillrate                        | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
@@ -1992,7 +2054,6 @@ mat_software_aa_debug                     | convar   | 0        | "FCVAR_DEVELOP
 mat_software_aa_edge_threshold            | convar   | 1.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Software AA - adjusts the sensitivity of the software AA shader's edge detection (default 1.0 - a lower value will soften more edges, a higher value will soften fewer)
 mat_software_aa_quality                   | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Software AA quality mode: (0 - 5-tap filter), (1 - 9-tap filter)
 mat_software_aa_strength                  | convar   | -1.0     | "FCVAR_DEVELOPMENTONLY" | Software AA - perform a software anti-aliasing post-process (an alternative/supplement to MSAA). This value sets the strength of the effect: (0.0 - off), (1.0 - full)
-mat_software_aa_strength_detail           | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Tracks whether a user has received a notification message during this instance of the game.
 mat_software_aa_strength_vgui             | convar   | -1.0     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Same as mat_software_aa_strength, but forced to this value when called by the post vgui AA pass.
 mat_software_aa_tap_offset                | convar   | 1.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Software AA - adjusts the displacement of the taps used by the software AA shader (default 1.0 - a lower value will make the image sharper, higher will make it blurrier)
 mat_softwarelighting                      | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
@@ -2052,7 +2113,6 @@ mc_turnPctPegged                          | convar   | 1.0      | "FCVAR_DEVELOP
 mc_turnPctPeggedMultiplier                | convar   | 1.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | speed multiplier when pegged
 mc_turn_curve                             | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | What type of acceleration curve to use for turning.
 mc_turn_dampening_blend_amount            | convar   | 0.02     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | dampening player's aim while scoped
-mc_use_recoil_on_cursor                   | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 mc_zoom_out_cursor_offset_blend           | convar   | 0.05     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 0.0 means snap to the new amount.
 mc_zoomed_aim_style                       | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 0-analog stick style. 1-pointer style.
 mc_zoomed_out_dead_zone_radius            | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 0 to 0.9. 0 being just around the center of the screen and 1 being the edges of the screen.
@@ -2067,7 +2127,6 @@ mem_force_flush_section                   | convar   |          | "FCVAR_DEVELOP
 mem_incremental_compact                   | cmd      |  |                  | 
 mem_incremental_compact_rate              | convar   | .5       | "FCVAR_CHEAT"    | Rate at which to attempt internal heap compation
 mem_level                                 | convar   | 2        | "FCVAR_DEVELOPMENTONLY" | Memory Level - Default: High
-mem_level_restart                         | convar   | -1       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Used to set video property at device reset.
 mem_max_heapsize                          | convar   | 512      | "FCVAR_DEVELOPMENTONLY" | Maximum amount of memory to dedicate to engine hunk and datacache (in mb)
 mem_max_heapsize_dedicated                | convar   | 64       | "FCVAR_DEVELOPMENTONLY" | Maximum amount of memory to dedicate to engine hunk and datacache, for dedicated server (in mb)
 mem_min_heapsize                          | convar   | 48       | "FCVAR_DEVELOPMENTONLY" | Minimum amount of memory to dedicate to engine hunk and datacache (in mb)
@@ -2080,15 +2139,6 @@ mem_vcollide                              | cmd      |  |                  | Dum
 mem_verify                                | cmd      |  |                  | Verify the validity of the heap
 memory                                    | cmd      |  |                  | Print memory stats.
 menuselect                                | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_CLIENTCMD_CAN_EXECUTE" | menuselect
-message_antialias                         | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Tracks whether a user has received a notification message during this instance of the game.
-message_cpu_detail                        | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Tracks whether a user has received a notification message during this instance of the game.
-message_filtering                         | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Tracks whether a user has received a notification message during this instance of the game.
-message_model_detail                      | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Tracks whether a user has received a notification message during this instance of the game.
-message_paged_pool_detail                 | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Tracks whether a user has received a notification message during this instance of the game.
-message_power                             | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Tracks whether a user has received a notification message during this instance of the game.
-message_queued_mode                       | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Tracks whether a user has received a notification message during this instance of the game.
-message_shader_detail                     | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Tracks whether a user has received a notification message during this instance of the game.
-message_vsync                             | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Tracks whether a user has received a notification message during this instance of the game.
 miniprofiler_dump                         | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
 minisave                                  | cmd      |  | "FCVAR_DONTRECORD" | Saves game (for current level only!)
 mm_cfgdebug_mode                          | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
@@ -2122,7 +2172,6 @@ mm_player_search_lan_ping_duration        | convar   | 0.6      | "FCVAR_DEVELOP
 mm_player_search_lan_ping_interval        | convar   | 0.2      | "FCVAR_DEVELOPMENTONLY" | Interval between LAN discovery pings.
 mm_player_search_requests_limit           | convar   | -1       | "FCVAR_DEVELOPMENTONLY" | How many friend requests are displayed.
 mm_player_search_update_interval          | convar   | 10       | "FCVAR_DEVELOPMENTONLY" | Interval between players searches.
-mm_queue                                  | convar   | 2        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 mm_queue_draft_show                       | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_HIDDEN", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Display current draft
 mm_queue_show_stats                       | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Display global server stats
 mm_server_search_inet_ping_interval       | convar   | 1.0      | "FCVAR_DEVELOPMENTONLY" | How long to wait between pinging internet server details.
@@ -2743,7 +2792,43 @@ paint_min_valid_alpha_value               | convar   | 0.7f     | "FCVAR_DEVELOP
 paintsplat_bias                           | convar   | 0.1f     | "FCVAR_REPLICATED", "FCVAR_CHEAT" | Change bias value for computing circle buffer
 paintsplat_max_alpha_noise                | convar   | 0.1f     | "FCVAR_REPLICATED", "FCVAR_CHEAT" | Max noise value of circle alpha
 paintsplat_noise_enabled                  | convar   | 1        | "FCVAR_REPLICATED", "FCVAR_CHEAT" | 
+pan_asynctext                             | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+pan_disabletextshadowcache                | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+pan_dx                                    | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
 panel_test_title_safe                     | convar   | 0        | "FCVAR_CHEAT"    | Test vgui panel positioning with title safe indentation
+panorama_3dpanel_anim_fadeinout_time_scale | convar   | 2.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | temp scale factor for animation fade in/out time
+panorama_3dpanel_anims_bookend            | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | default true. If all anims designed to follow on from each other
+panorama_3dpanel_camera_preset_blend_time | convar   | 1.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | time to blend between camera presets
+panorama_3dpanel_fxaa                     | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 0-off, 1-always use fxaa (not just as a fallback if scratch rt not large enough for SSAA)
+panorama_3dpanel_fxaa_edge_threshold_Q    | convar   | .35      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | The minimum amount of local contrast required to apply algorithm: (0.063 - overkill, slower), (0.125 - high quality), (0.166 - default), (0.250 - low quality), (0.333 - too little, faster)
+panorama_3dpanel_fxaa_edge_threshold_min_Q | convar   | 0.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Trims the algorithm from processing darks: (0.0312 - visible limit, slower), (0.0625 - high quality, faster), (0.0833 - upper limit, the start of visible unfiltered edges). Special note: when using FXAA_GREEN_AS_LUMA, likely want to set this to zero
+panorama_3dpanel_fxaa_subpixel_Q          | convar   | 0.75     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Effects sub-pixel AA quality and inversely sharpness (only used on FXAA Quality): (0.0 - off), (1.0 - upper limit, softer), default = 0.75
+panorama_3dpanel_guided_intro_delay       | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | time to blend between camera presets
+panorama_3dpanel_pedestalmodel            | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_3dpanel_shadowdepthbias          | convar   | 0.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | depthbias to use when rendering flashlight depth
+panorama_3dpanel_shadowslopescaledepthbias | convar   | 5.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | slopescaledepthbias to use when rendering flashlight depth
+panorama_3dpanel_ssaa                     | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 0-off, 1-use ssaa if possible, will add (or fallback to) fxaa if scratch rt not large enough for 1.25x supersmapling in both dimensions
+panorama_camera_inout_scale               | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_camera_inout_scale_kb            | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_camera_lookat_scale              | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_camera_rotate_altitude_scale     | convar   | 0.004    | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_camera_rotate_azimuth_scale      | convar   | 0.004    | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_camera_rotate_radius_scale       | convar   | 1.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_debugger_saved_height            | convar   | 720      | "FCVAR_ARCHIVE"  | 
+panorama_debugger_saved_width             | convar   | 1280     | "FCVAR_ARCHIVE"  | 
+panorama_debugger_saved_xpos              | convar   | 0        | "FCVAR_ARCHIVE"  | 
+panorama_debugger_saved_ypos              | convar   | 0        | "FCVAR_ARCHIVE"  | 
+panorama_dump_deny_input                  | cmd      |  | "FCVAR_DEVELOPMENTONLY" | Dumps panels currently denying all input to the game
+panorama_light_inout_scale                | convar   | 0.5      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_light_move_scale                 | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_light_rotate_altitude_scale      | convar   | 0.004    | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_light_rotate_azimuth_scale       | convar   | 0.004    | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_loadout_rotate_drag              | convar   | 0.19     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_loadout_rotate_frametime_multiplier | convar   | 4.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_loadout_rotate_grab_scale        | convar   | 0.5      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_loadout_rotate_intro_scale       | convar   | 0.5      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_loadout_rotate_scale             | convar   | 2.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+panorama_play_movie_ambient_sound         | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | 
 particle_sim_alt_cores                    | convar   | 2        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 particle_simulateoverflow                 | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Used for stress-testing particle systems. Randomly denies creation of particles.
 particle_test_attach_attachment           | convar   | 0        | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Attachment index for attachment mode
@@ -2797,30 +2882,15 @@ pixelvis_debug                            | cmd      |  | "FCVAR_CLIENTDLL" | Du
 play                                      | cmd      |  | "FCVAR_SERVER_CAN_EXECUTE" | Play a sound.
 play_distance                             | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_ARCHIVE_XBOX" | Set to 1:"2 foot" or 2:"10 foot" presets.
 play_hrtf                                 | cmd      |  | "FCVAR_SERVER_CAN_EXECUTE" | Play a sound with HRTF spatialization.
-play_with_friends_enabled                 | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_RELEASE" | 
 playcast                                  | cmd      |  |                  | Play a broadcast
 playdemo                                  | cmd      |  |                  | Play a recorded demo file (.dem ).
-player_botdifflast_s                      | convar   | 2        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | 
 player_competitive_maplist_2v2_7_0_3F9CD3AE | convar   | mg_de_train,mg_de_lake,mg_de_inferno,mg_de_shortnuke,mg_de_shortdust,mg_gd_rialto,mg_de_overpass,mg_de_cbble | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | 
 player_competitive_maplist_8_7_0_77AED00  | convar   | mg_de_dust2,mg_de_train,mg_de_inferno,mg_de_nuke,mg_de_mirage,mg_cs_office,mg_de_cache,mg_cs_agency,mg_de_overpass,mg_de_cbble,mg_de_canals | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | 
 player_debug_print_damage                 | convar   | 0        | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | When true, print amount and type of all damage received by player to console.
-player_gamemodelast_m                     | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | 
-player_gamemodelast_s                     | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | 
-player_gametypelast_m                     | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | 
-player_gametypelast_s                     | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | 
-player_last_leaderboards_filter           | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | Last mode setting in the Leaderboards screen
-player_last_leaderboards_mode             | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | Last mode setting in the Leaderboards screen
-player_last_leaderboards_panel            | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | Last opened panel in the Leaderboards screen
-player_last_medalstats_category           | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | Last selected category on the Medals panel in the Medals & Stats screen
-player_last_medalstats_panel              | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | Last opened panel in the Medals & Stats screen
-player_maplast_m                          | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | 
-player_maplast_s                          | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | 
-player_medalstats_most_recent_time        | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | Timestamp of most recently earned achievement displayed on Medals & Stats screen
-player_medalstats_recent_range            | convar   | 432000   | "FCVAR_CLIENTDLL", "FCVAR_RELEASE" | Window (in seconds of recent achievements to show
 player_nevershow_communityservermessage   | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | 
 player_old_armor                          | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | 
 player_teamplayedlast                     | convar   | 3        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | 
-player_wargames_list_7_0_604              | convar   | all      | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | 
+player_wargames_list2_7_0_604             | convar   | mg_skirmish_flyingscoutsman,mg_skirmish_armsrace,mg_skirmish_demolition | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | 
 playflush                                 | cmd      |  |                  | Play a sound, reloading from disk in case of changes.
 playgamesound                             | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_SERVER_CAN_EXECUTE", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Play a sound from the game sounds txt file
 playoverwatchevidence                     | cmd      |  | "FCVAR_HIDDEN"   | Play evidence for an overwatch case.
@@ -2955,6 +3025,7 @@ r_deferopaquefastclipped                  | convar   | 1        | "FCVAR_DEVELOP
 r_depthoverlay                            | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Replaces opaque objects with their grayscaled depth values. r_showz_power scales the output.
 r_disable_distance_fade_on_big_props      | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Completely disable distance fading on large props
 r_disable_distance_fade_on_big_props_thresh | convar   | 48000    | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Distance prop fade disable threshold size
+r_disable_static_prop_loading             | convar   | 0        | "FCVAR_CHEAT"    | If non-zero when a map loads, static props won't be loaded
 r_disable_update_shadow                   | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
 r_dlightsenable                           | convar   | 1        | "FCVAR_CHEAT", "FCVAR_MATERIAL_SYSTEM_THREAD" | 
 r_dopixelvisibility                       | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
@@ -2984,7 +3055,6 @@ r_drawparticles                           | convar   | 1        | "FCVAR_CLIENTD
 r_drawpixelvisibility                     | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Show the occlusion proxies
 r_drawrenderboxes                         | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | (0 - off) (1 - Draws the bounding box of entities) (2 - Draws the axis aligned bounding box used for culling) (3 - draws both bounding boxes)
 r_drawropes                               | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
-r_drawscaleform                           | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | 
 r_drawscreenoverlay                       | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT", "FCVAR_SERVER_CAN_EXECUTE" | 
 r_drawskybox                              | convar   | 1        | "FCVAR_CHEAT"    | 
 r_drawsprites                             | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
@@ -3238,7 +3308,6 @@ rate                                      | convar   | 196608   | "FCVAR_ARCHIVE
 rcon                                      | cmd      |  | "FCVAR_DONTRECORD" | Issue an rcon command.
 rcon_address                              | convar   |          | "FCVAR_DONTRECORD", "FCVAR_RELEASE", "FCVAR_SERVER_CANNOT_QUERY" | Address of remote server if sending unconnected rcon commands (format x.x.x.x:p) 
 rcon_password                             | convar   |          | "FCVAR_DONTRECORD", "FCVAR_RELEASE", "FCVAR_SERVER_CANNOT_QUERY" | remote console password.
-ready_to_join_game_proceed_to_motd_and_team_select | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_HIDDEN", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Ready to join game, proceed to motd and team select
 rebuy                                     | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Attempt to repurchase items with the order listed in cl_rebuy
 recompute_speed                           | cmd      |  | "FCVAR_CHEAT"    | Recomputes clock speed (for debugging purposes).
 record                                    | cmd      |  | "FCVAR_DONTRECORD" | Record a demo.
@@ -3299,8 +3368,8 @@ rr_remarkable_max_distance                | convar   | 1200     | "FCVAR_GAMEDLL
 rr_remarkable_world_entities_replay_limit | convar   | 1        | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | TLK_REMARKs will be dispatched no more than this many times for any given info_remarkable
 rr_remarkables_enabled                    | convar   | 1        | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | If 1, polling for info_remarkables and issuances of TLK_REMARK is enabled.
 rr_thenany_score_slop                     | convar   | 0.0      | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | When computing respondents for a 'THEN ANY' rule, all rule-matching scores within this much of the best score will be considered.
-safezonex                                 | convar   | 1.0      | "FCVAR_ARCHIVE", "FCVAR_ARCHIVE_XBOX" | The percentage of the screen width that is considered safe from overscan
-safezoney                                 | convar   | 1.0      | "FCVAR_ARCHIVE", "FCVAR_ARCHIVE_XBOX" | The percentage of the screen height that is considered safe from overscan
+safezonex                                 | convar   | 1.0      | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_ARCHIVE_XBOX" | The percentage of the screen width that is considered safe from overscan
+safezoney                                 | convar   | 1.0      | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_ARCHIVE_XBOX" | The percentage of the screen height that is considered safe from overscan
 save                                      | cmd      |  | "FCVAR_DONTRECORD" | Saves current game.
 save_async                                | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | 
 save_asyncdelay                           | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | For testing, adds this many milliseconds of delay to the save operation.
@@ -3372,6 +3441,7 @@ score_planted_bomb_proximity_damage_radius_inner | convar   | 120      | "FCVAR_
 score_planted_bomb_proximity_damage_radius_outer | convar   | 600      | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | Outer radius (zero bonus) for doing damage near planted bomb
 score_team_damage_bonus                   | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | Points awarded for each point of damage a nearby (in same zone) teammate does to enemies
 score_typical_good_score                  | convar   | 5        | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | An average good score for use in funfacts
+scoreboard_use_sf                         | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Use scaleform scoreboard
 scr_centertime                            | convar   | 4        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 screenfademaxsize                         | cmd      |  | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Modify global screen fade max size in pixels
 screenfademinsize                         | cmd      |  | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Modify global screen fade min size in pixels
@@ -3405,8 +3475,6 @@ setpause                                  | cmd      |  |                  | Set
 setpos                                    | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Move player to specified origin (must have sv_cheats).
 setpos_exact                              | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Move player to an exact specified origin (must have sv_cheats).
 setpos_player                             | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Move specified player to specified origin (must have sv_cheats).
-sf4_meshcache_stats                       | cmd      |  |                  | Outputs Scaleform 4 mesh cache stats
-sf_ui_tint                                | convar   | 8        | "FCVAR_ARCHIVE"  | The current tint applied to the Scaleform UI
 sfm_record_hz                             | convar   | 30       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 shake                                     | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Shake the screen.
 shake_show                                | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Displays a list of the active screen shakes.
@@ -3520,6 +3588,10 @@ snd_hrtf_stereo_blend                     | convar   | 1        | "FCVAR_CHEAT" 
 snd_hrtf_volume                           | convar   | 0.8      | "FCVAR_CHEAT"    | Controls volume of HRTF sounds
 snd_hwcompat                              | convar   | 0        | "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 snd_list                                  | convar   |          | "FCVAR_CHEAT"    | 
+snd_mainmenu_music_break_time_max         | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Minimum amount of time to pause between playing main menu music
+snd_mainmenu_music_break_time_min         | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Minimum amount of time to pause between playing main menu music
+snd_mainmusic_hrtf                        | convar   | 0.0      | "FCVAR_DEVELOPMENTONLY" | Makes main menu music sound like a radio
+snd_mainmusic_hrtf_transition_speed       | convar   | 0.03     | "FCVAR_DEVELOPMENTONLY" | Makes main menu music sound like a radio
 snd_mapobjective_volume                   | convar   | 1.0      | "FCVAR_ARCHIVE", "FCVAR_RELEASE" | Relative volume of map objective music.
 snd_max_pitch_shift_inaccuracy            | convar   | 0.08     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 snd_max_same_sounds                       | convar   | 4        | "FCVAR_CHEAT"    | 
@@ -3540,9 +3612,11 @@ snd_mixer_master_level                    | convar   | 1.0      | "FCVAR_CHEAT" 
 snd_moviefix                              | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | Defer sound recording until next tick when laying off movies.
 snd_music_boost                           | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_REPLICATED" | Specifies an amount to boost music volume by
 snd_music_selection                       | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Tracking rotating music for players with no music packs equipped.
-snd_musicvolume                           | convar   | 0.7      | "FCVAR_ARCHIVE", "FCVAR_ARCHIVE_XBOX" | Overall music volume
+snd_music_volume_onetime_reset_2          | convar   | 0        | "FCVAR_HIDDEN", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+snd_musicvolume_fixed                     | convar   | 0.3      | "FCVAR_DEVELOPMENTONLY", "FCVAR_HIDDEN" | Overall music volume
 snd_musicvolume_multiplier_inoverlay      | convar   | 0.1      | "FCVAR_ARCHIVE", "FCVAR_ARCHIVE_XBOX" | Music volume multiplier when Steam Overlay is active
 snd_mute_losefocus                        | convar   | 1        | "FCVAR_ARCHIVE", "FCVAR_NOT_CONNECTED" | 
+snd_mvp_volume                            | convar   | 0.0      | "FCVAR_ARCHIVE", "FCVAR_RELEASE" | Relative volume of the MVP music.
 snd_noextraupdate                         | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
 snd_obscured_gain_dB                      | convar   | -2.70    | "FCVAR_CHEAT"    | 
 snd_occlusion                             | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_HIDDEN" | 
@@ -3590,6 +3664,7 @@ snd_setmixlayer_amount                    | cmd      |  | "FCVAR_CHEAT"    | Set
 snd_setsoundparam                         | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_SERVER_CAN_EXECUTE", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Set a sound paramater
 snd_show                                  | convar   | 0        | "FCVAR_CHEAT"    | Show sounds info
 snd_show_channel_count                    | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | Show the current count of channel types.
+snd_show_events                           | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | Logs all sound events that are emitted
 snd_show_filter                           | convar   |          | "FCVAR_CHEAT"    | Limit debug sounds to those containing this substring
 snd_show_print                            | convar   | 0        | "FCVAR_CHEAT"    | Print to console the sounds that are normally printed on screen only. 1 = print to console and to screen; 2 = print only to console
 snd_showclassname                         | convar   | 0        | "FCVAR_CHEAT"    | 
@@ -3755,10 +3830,14 @@ stats                                     | cmd      |  |                  | Pri
 status                                    | cmd      |  |                  | Display map and connection status.
 steam_controller_haptics                  | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_RELEASE" | 
 steam_controller_status                   | cmd      |  |                  | Spew report of steam controller status
+steamcontroller_flow_interval             | convar   | 7000     | "FCVAR_DEVELOPMENTONLY" | 
+steamcontroller_flow_sensitivity          | convar   | 0.75     | "FCVAR_DEVELOPMENTONLY" | 
+steamcontroller_haptic_intensity          | convar   | 320      | "FCVAR_DEVELOPMENTONLY" | 
 steamworks_sessionid_client               | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_HIDDEN", "FCVAR_USERINFO" | The client session ID for the new steamworks gamestats.
 steamworks_sessionid_lifetime_client      | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_HIDDEN" | The full client session ID for the new steamworks gamestats.
 steamworks_sessionid_server               | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_HIDDEN", "FCVAR_REPLICATED" | The server session ID for the new steamworks gamestats.
 step_spline                               | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | 
+sticky_tooltips                           | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Don't ever hide tooltips. Helpful when debugging complicated tooltip layouts.
 stop                                      | cmd      |  |                  | Finish recording demo.
 stop_transition_videos_fadeout            | cmd      |  | "FCVAR_CLIENTDLL" | Fades out all transition videos playing to the screen: <time>
 stopdemo                                  | cmd      |  | "FCVAR_DONTRECORD" | Stop playing back a demo.
@@ -4152,17 +4231,11 @@ sv_wateraccelerate                        | convar   | 10       | "FCVAR_DEVELOP
 sv_waterdist                              | convar   | 12       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_REPLICATED" | Vertical view fixup when eyes are near water plane.
 sv_waterfriction                          | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_NOTIFY", "FCVAR_REPLICATED", "FCVAR_RELEASE" | 
 sv_workshop_allow_other_maps              | convar   | 1        | "FCVAR_GAMEDLL", "FCVAR_RELEASE" | When hosting a workshop collection, users can play other workshop map on this server when it is empty and then mapcycle into this server collection.
-sys_antialiasing                          | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Convar used exclusively by the options screen to set anti aliasing levels. Changing this convar manually will have no effect.
-sys_aspectratio                           | convar   | -1       | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Convar used exclusively by the options screen to set aspect ratio. Changing this convar manually will have no effect.
 sys_minidumpexpandedspew                  | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
 sys_minidumpspewlines                     | convar   | 500      | "FCVAR_RELEASE"  | Lines of crash dump console spew to keep.
-sys_refldetail                            | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Convar used exclusively by the options screen to set water reflection levels. Changing this convar manually will have no effect.
-sys_resolution                            | convar   | -1       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Convar used exclusively by the options screen to set resolution. Changing this convar manually will have no effect.
-sys_sound_quality                         | convar   | -1       | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Convar used exclusively by the options screen to set sound quality. Changing this convar manually will have no effect.
-sys_voice                                 | convar   | -1       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Convar used exclusively by the options screen to set voice options. Changing this convar manually will have no effect.
-sys_vsync                                 | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Used to set video property at device reset.
 teammenu                                  | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_SERVER_CAN_EXECUTE" | Show team selection window
 template_debug                            | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL" | 
+test_convar                               | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_CLIENTCMD_CAN_EXECUTE" | Skips the prompt when saving a buy favorite in the buy menu
 test_dispatcheffect                       | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Test a clientside dispatch effect. 	Usage: test_dispatcheffect <effect name> <distance away> <flags> <magnitude> <scale> 	Defaults are: <distance 1024> <flags 0> <magnitude 0> <scale 0> 
 test_entity_blocker                       | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Test command that drops an entity blocker out in front of the player.
 test_freezeframe                          | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | Test the freeze frame code.
@@ -4289,22 +4362,32 @@ tv_title                                  | convar   | GOTV     | "FCVAR_RELEASE
 tv_transmitall                            | convar   | 1        | "FCVAR_REPLICATED", "FCVAR_RELEASE" | Transmit all entities (not only director view)
 tv_window_size                            | convar   | 16.0     | "FCVAR_DEVELOPMENTONLY" | Specifies the number of seconds worth of frames that the tv replay system should keep in memory. Increasing this greatly increases the amount of memory consumed by the TV system
 tweak_ammo_impulses                       | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Allow real-time tweaking of the ammo impulse values.
-ui_component_image_collect_debug          | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
-ui_component_image_collect_keeptime       | convar   | 30       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
-ui_component_image_collect_size_many_avatars | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
-ui_component_image_collect_size_many_itemimgs | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
-ui_component_image_collect_time           | convar   | 5        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+ui_inventorysettings_recently_acknowledged | convar   |          | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 ui_loading_tip_f1                         | convar   | 0.05     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 ui_loading_tip_f2                         | convar   | 0.40     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 ui_loading_tip_refresh                    | convar   | 5        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+ui_playsettings_maps_listen_casual        | convar   | random_classic | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_playsettings_maps_listen_competitive   | convar   | random_classic | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_playsettings_maps_listen_deathmatch    | convar   | random_classic | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_playsettings_maps_listen_scrimcomp2v2  | convar   | mg_de_inferno | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_playsettings_maps_listen_skirmish      | convar   | mg_skirmish_flyingscoutsman | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_playsettings_maps_official_casual      | convar   | mg_casualsigma | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_playsettings_maps_official_deathmatch  | convar   | mg_casualsigma | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_playsettings_maps_official_survival    | convar   | mg_xl_enclave | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_playsettings_mode_listen               | convar   | casual   | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_playsettings_mode_official             | convar   | casual   | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_playsettings_warmup_map_name           | convar   | de_mirage | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 ui_posedebug_fade_in_time                 | convar   | 0.2      | "FCVAR_CLIENTDLL", "FCVAR_CHEAT", "FCVAR_DONTRECORD" | Time during which a new pose activity layer is shown in green in +posedebug UI
 ui_posedebug_fade_out_time                | convar   | 0.8      | "FCVAR_CLIENTDLL", "FCVAR_CHEAT", "FCVAR_DONTRECORD" | Time to keep a no longer active pose activity layer in red until removing it from +posedebug UI
 ui_reloadscheme                           | cmd      |  | "FCVAR_CLIENTDLL" | Reloads the resource files for the active UI window
 ui_steam_overlay_notification_position    | convar   | topleft  | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Steam overlay notification position
 ui_store_scaleform                        | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_HIDDEN" | Sets store UI to display scaleform.
 ui_test_community_matchmaking             | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
+ui_vanitysetting_itemid                   | convar   |          | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_vanitysetting_loadoutslot              | convar   |          | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_vanitysetting_model                    | convar   |          | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_vanitysetting_team                     | convar   |          | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 ui_volume_scale                           | convar   | 1.0      | "FCVAR_DEVELOPMENTONLY" | 
-ui_workshop_games_expire_minutes          | convar   | 3        | "FCVAR_CLIENTDLL", "FCVAR_RELEASE" | 
 unbind                                    | cmd      |  |                  | Unbind a key.
 unbindall                                 | cmd      |  |                  | Unbind all keys.
 unbindalljoystick                         | cmd      |  |                  | Unbind all joystick keys.
@@ -4338,7 +4421,6 @@ vgui_panel_active                         | convar   |          | "FCVAR_DEVELOP
 vgui_show_glyph_miss                      | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
 vgui_spew_fonts                           | cmd      |  |                  | 
 vgui_togglepanel                          | cmd      |  |                  | show/hide vgui panel by name.
-videooptions_optionsui_callback_disabled  | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Used to set video property from options UI.
 view_punch_decay                          | convar   | 18       | "FCVAR_CLIENTDLL", "FCVAR_REPLICATED", "FCVAR_CHEAT", "FCVAR_RELEASE" | Decay factor exponent for view punch
 view_recoil_tracking                      | convar   | 0.45     | "FCVAR_CLIENTDLL", "FCVAR_REPLICATED", "FCVAR_CHEAT", "FCVAR_RELEASE" | How closely the view tracks with the aim punch from weapon recoil
 viewanim_addkeyframe                      | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
@@ -4403,6 +4485,7 @@ voice_serverdebug                         | convar   | 0        | "FCVAR_DEVELOP
 voice_show_mute                           | cmd      |  |                  | Show whether current players are muted.
 voice_showchannels                        | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
 voice_showincoming                        | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
+voice_status_test_toggle                  | cmd      |  | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Test voice and status notices
 voice_steal                               | convar   | 2        | "FCVAR_DEVELOPMENTONLY" | 
 voice_system_enable                       | convar   | 1        | "FCVAR_ARCHIVE"  | Toggle voice system.
 voice_threshold                           | convar   | 4000     | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | 
@@ -4519,7 +4602,7 @@ weapon_showproficiency                    | convar   | 0        | "FCVAR_DEVELOP
 webapi_values_init_buffer_size_0          | convar   | 65536    | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Initial buffer size for buffers in the WebAPIValues buffer pool
 webapi_values_max_pool_size_mb_0          | convar   | 10       | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Maximum size in bytes of the WebAPIValues buffer pool
 whitelistcmd                              | cmd      |  |                  | Runs a whitelisted command.
-windows_speaker_config                    | convar   | -1       | "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+windows_speaker_config                    | convar   | 0        | "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 wipe_nav_attributes                       | cmd      |  | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | Clear all nav attributes of selected area.
 workshop_publish                          | cmd      |  | "FCVAR_CLIENTDLL", "FCVAR_DONTRECORD", "FCVAR_RELEASE" | Bring up the Workshop Publish dialog.
 workshop_start_map                        | cmd      |  | "FCVAR_GAMEDLL"  | Sets the first map to load once a workshop collection been hosted. Takes the file id of desired start map as a parameter.
