@@ -14,6 +14,7 @@ Name | Type | Default Value | Flags | Description
 +campitchup                               | cmd      |  | "FCVAR_CLIENTDLL" | 
 +camyawleft                               | cmd      |  | "FCVAR_CLIENTDLL" | 
 +camyawright                              | cmd      |  | "FCVAR_CLIENTDLL" | 
++cl_show_team_equipment                   | cmd      |  | "FCVAR_CLIENTDLL" | 
 +commandermousemove                       | cmd      |  | "FCVAR_CLIENTDLL" | 
 +csm_rot_x_neg                            | cmd      |  | "FCVAR_CLIENTDLL" | 
 +csm_rot_x_plus                           | cmd      |  | "FCVAR_CLIENTDLL" | 
@@ -68,6 +69,7 @@ Name | Type | Default Value | Flags | Description
 -campitchup                               | cmd      |  | "FCVAR_CLIENTDLL" | 
 -camyawleft                               | cmd      |  | "FCVAR_CLIENTDLL" | 
 -camyawright                              | cmd      |  | "FCVAR_CLIENTDLL" | 
+-cl_show_team_equipment                   | cmd      |  | "FCVAR_CLIENTDLL" | 
 -commandermousemove                       | cmd      |  | "FCVAR_CLIENTDLL" | 
 -csm_rot_x_neg                            | cmd      |  | "FCVAR_CLIENTDLL" | 
 -csm_rot_x_plus                           | cmd      |  | "FCVAR_CLIENTDLL" | 
@@ -994,7 +996,7 @@ cl_showfps5_disp_time                     | convar   | 1.0      | "FCVAR_DEVELOP
 cl_showhelp                               | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Set to 0 to not show on-screen help
 cl_showloadout                            | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_SS", "FCVAR_ARCHIVE_XBOX" | Toggles display of current loadout.
 cl_showpausedimage                        | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Show the 'Paused' image when game is paused.
-cl_showpluginmessages                     | convar   | 1        | "FCVAR_ARCHIVE"  | Allow plugins to display messages to you
+cl_showpluginmessages2                    | convar   | 0        | "FCVAR_ARCHIVE"  | Allow plugins to display messages to you
 cl_showpos                                | convar   | 0        | "FCVAR_CLIENTDLL", "FCVAR_RELEASE" | Draw current position at top of screen
 cl_showtextmsg                            | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Enable/disable text messages printing on the screen.
 cl_sidespeed                              | convar   | 450      | "FCVAR_CLIENTDLL", "FCVAR_CHEAT" | 
