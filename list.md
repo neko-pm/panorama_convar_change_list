@@ -3615,7 +3615,7 @@ snd_moviefix                              | convar   | 1        | "FCVAR_DEVELOP
 snd_music_boost                           | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL", "FCVAR_REPLICATED" | Specifies an amount to boost music volume by
 snd_music_selection                       | convar   | 1        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | Tracking rotating music for players with no music packs equipped.
 snd_music_volume_onetime_reset_2          | convar   | 0        | "FCVAR_HIDDEN", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
-snd_musicvolume_fixed                     | convar   | 0.3      | "FCVAR_DEVELOPMENTONLY", "FCVAR_HIDDEN" | Overall music volume
+snd_musicvolume_fixed                     | convar   | 1.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_HIDDEN" | Overall music volume
 snd_musicvolume_multiplier_inoverlay      | convar   | 0.1      | "FCVAR_ARCHIVE", "FCVAR_ARCHIVE_XBOX" | Music volume multiplier when Steam Overlay is active
 snd_mute_losefocus                        | convar   | 1        | "FCVAR_ARCHIVE", "FCVAR_NOT_CONNECTED" | 
 snd_mvp_volume                            | convar   | 0.0      | "FCVAR_ARCHIVE", "FCVAR_RELEASE" | Relative volume of the MVP music.
