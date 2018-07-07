@@ -6,7 +6,9 @@
 #1 | 102570140068509816 | 5375719036071832502 | https://github.com/neko-pm/panorama_convar_change_list/commit/4a25aa41286f8efdb470e23f994706e44fcd2b0a
 #2 | 2766135964578633460 | 1185379324627243626 | https://github.com/neko-pm/panorama_convar_change_list/commit/d4912dedc897ff3458222d49ad24f97a3129bf38
 #3 | 9044312674806966351 | 3149010582865414809 | https://github.com/neko-pm/panorama_convar_change_list/commit/5a05d094797990088a51d2aa05aa44e72be90d5e
-#4 | 6092565854778602553 | 1253424485281316262 | 
+#4 | 6092565854778602553 | 1253424485281316262 | `no changes`
+#5 | 8705111441091865439 | 7759653382405175390 | https://github.com/neko-pm/panorama_convar_change_list/commit/27b762ef183589a660cf410fbc0e8dcf7e6d6f96
+#6 | 81822819174040437 | 7330361034775880507 | `no changes`
 
 ### Credits
 Information dumped with a slightly modified version of https://github.com/saul/csgo-cvar-unhide
@@ -135,6 +137,7 @@ panorama_3dpanel_pedestalmodel            | convar   | 1        | "FCVAR_DEVELOP
 panorama_3dpanel_shadowdepthbias          | convar   | 0.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | depthbias to use when rendering flashlight depth
 panorama_3dpanel_shadowslopescaledepthbias | convar   | 5.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | slopescaledepthbias to use when rendering flashlight depth
 panorama_3dpanel_ssaa                     | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 0-off, 1-use ssaa if possible, will add (or fallback to) fxaa if scratch rt not large enough for 1.25x supersmapling in both dimensions
+panorama_3dpanel_ssaa_min_scale           | convar   | 1.25     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | min scaling of panel size for ssaa to be effective, otherwise resorts to fxaa
 panorama_camera_inout_scale               | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 panorama_camera_inout_scale_kb            | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 panorama_camera_lookat_scale              | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
@@ -156,6 +159,7 @@ panorama_loadout_rotate_grab_scale        | convar   | 0.5      | "FCVAR_DEVELOP
 panorama_loadout_rotate_intro_scale       | convar   | 0.5      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 panorama_loadout_rotate_scale             | convar   | 2.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 panorama_play_movie_ambient_sound         | convar   | 1        | "FCVAR_DEVELOPMENTONLY" | 
+player_botdifflast_s                      | convar   | 2        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 player_wargames_list2_7_0_604             | convar   | mg_skirmish_flyingscoutsman, mg_skirmish_armsrace, mg_skirmish_demolition | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | 
 r_disable_static_prop_loading             | convar   | 0        | "FCVAR_CHEAT"    | If non-zero when a map loads, static props won't be loaded
 scoreboard_use_sf                         | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | Use scaleform scoreboard
@@ -181,6 +185,7 @@ ui_playsettings_maps_listen_skirmish      | convar   | mg_skirmish_flyingscoutsm
 ui_playsettings_maps_official_casual      | convar   | mg_casualsigma | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 ui_playsettings_maps_official_deathmatch  | convar   | mg_casualsigma | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 ui_playsettings_maps_official_survival    | convar   | mg_xl_enclave | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_playsettings_maps_workshop             | convar   |          | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 ui_playsettings_mode_listen               | convar   | casual   | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 ui_playsettings_mode_official             | convar   | casual   | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 ui_playsettings_warmup_map_name           | convar   | de_mirage | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
