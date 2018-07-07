@@ -2810,6 +2810,7 @@ panorama_3dpanel_pedestalmodel            | convar   | 1        | "FCVAR_DEVELOP
 panorama_3dpanel_shadowdepthbias          | convar   | 0.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | depthbias to use when rendering flashlight depth
 panorama_3dpanel_shadowslopescaledepthbias | convar   | 5.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | slopescaledepthbias to use when rendering flashlight depth
 panorama_3dpanel_ssaa                     | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 0-off, 1-use ssaa if possible, will add (or fallback to) fxaa if scratch rt not large enough for 1.25x supersmapling in both dimensions
+panorama_3dpanel_ssaa_min_scale           | convar   | 1.25     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | min scaling of panel size for ssaa to be effective, otherwise resorts to fxaa
 panorama_camera_inout_scale               | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 panorama_camera_inout_scale_kb            | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
 panorama_camera_lookat_scale              | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CLIENTDLL" | 
@@ -2886,6 +2887,7 @@ play_distance                             | convar   | 1        | "FCVAR_CLIENTD
 play_hrtf                                 | cmd      |  | "FCVAR_SERVER_CAN_EXECUTE" | Play a sound with HRTF spatialization.
 playcast                                  | cmd      |  |                  | Play a broadcast
 playdemo                                  | cmd      |  |                  | Play a recorded demo file (.dem ).
+player_botdifflast_s                      | convar   | 2        | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 player_competitive_maplist_2v2_7_0_3F9CD3AE | convar   | mg_de_train,mg_de_lake,mg_de_inferno,mg_de_shortnuke,mg_de_shortdust,mg_gd_rialto,mg_de_overpass,mg_de_cbble | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | 
 player_competitive_maplist_8_7_0_77AED00  | convar   | mg_de_dust2,mg_de_train,mg_de_inferno,mg_de_nuke,mg_de_mirage,mg_cs_office,mg_de_cache,mg_cs_agency,mg_de_overpass,mg_de_cbble,mg_de_canals | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE" | 
 player_debug_print_damage                 | convar   | 0        | "FCVAR_GAMEDLL", "FCVAR_CHEAT" | When true, print amount and type of all damage received by player to console.
@@ -3618,7 +3620,7 @@ snd_music_volume_onetime_reset_2          | convar   | 0        | "FCVAR_HIDDEN"
 snd_musicvolume_fixed                     | convar   | 1.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_HIDDEN" | Overall music volume
 snd_musicvolume_multiplier_inoverlay      | convar   | 0.1      | "FCVAR_ARCHIVE", "FCVAR_ARCHIVE_XBOX" | Music volume multiplier when Steam Overlay is active
 snd_mute_losefocus                        | convar   | 1        | "FCVAR_ARCHIVE", "FCVAR_NOT_CONNECTED" | 
-snd_mvp_volume                            | convar   | 0.0      | "FCVAR_ARCHIVE", "FCVAR_RELEASE" | Relative volume of the MVP music.
+snd_mvp_volume                            | convar   | 1.0      | "FCVAR_ARCHIVE", "FCVAR_RELEASE" | Relative volume of the MVP music.
 snd_noextraupdate                         | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
 snd_obscured_gain_dB                      | convar   | -2.70    | "FCVAR_CHEAT"    | 
 snd_occlusion                             | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_HIDDEN" | 
@@ -4376,6 +4378,7 @@ ui_playsettings_maps_listen_skirmish      | convar   | mg_skirmish_flyingscoutsm
 ui_playsettings_maps_official_casual      | convar   | mg_casualsigma | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 ui_playsettings_maps_official_deathmatch  | convar   | mg_casualsigma | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 ui_playsettings_maps_official_survival    | convar   | mg_xl_enclave | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
+ui_playsettings_maps_workshop             | convar   |          | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 ui_playsettings_mode_listen               | convar   | casual   | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 ui_playsettings_mode_official             | convar   | casual   | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
 ui_playsettings_warmup_map_name           | convar   | de_mirage | "FCVAR_CLIENTDLL", "FCVAR_ARCHIVE", "FCVAR_RELEASE" | 
