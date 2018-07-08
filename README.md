@@ -9,6 +9,7 @@
 #4 | 6092565854778602553 | 1253424485281316262 | `no changes`
 #5 | 8705111441091865439 | 7759653382405175390 | https://github.com/neko-pm/panorama_convar_change_list/commit/27b762ef183589a660cf410fbc0e8dcf7e6d6f96
 #6 | 81822819174040437 | 7330361034775880507 | `no changes`
+#7 | 8663756987575456264 | 307187269930640283 | `no changes`
 
 ### Credits
 Information dumped with a slightly modified version of https://github.com/saul/csgo-cvar-unhide
