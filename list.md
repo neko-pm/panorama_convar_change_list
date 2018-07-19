@@ -2444,6 +2444,7 @@ mp_stalemate_enable                       | convar   | 0        | "FCVAR_DEVELOP
 mp_stalemate_timelimit                    | convar   | 240      | "FCVAR_DEVELOPMENTONLY", "FCVAR_GAMEDLL", "FCVAR_REPLICATED" | Timelimit (in seconds) of the stalemate round.
 mp_starting_losses                        | convar   | 0        | "FCVAR_GAMEDLL", "FCVAR_REPLICATED", "FCVAR_RELEASE" | Determines what the initial loss streak is.
 mp_startmoney                             | convar   | 800      | "FCVAR_CLIENTDLL", "FCVAR_REPLICATED", "FCVAR_RELEASE" | amount of money each player gets when they reset
+mp_suicide_time                           | convar   | 5        | "FCVAR_GAMEDLL", "FCVAR_REPLICATED", "FCVAR_CHEAT" | Specifies number of seconds required to wait before another suicide.
 mp_swapteams                              | cmd      |  | "FCVAR_GAMEDLL"  | Swap the teams and restart the game
 mp_switchteams                            | cmd      |  | "FCVAR_GAMEDLL"  | Switch teams and restart the game
 mp_t_default_grenades                     | convar   |          | "FCVAR_CLIENTDLL", "FCVAR_REPLICATED", "FCVAR_RELEASE" | The default grenades that the Ts will spawn with.  To give multiple grenades, separate each weapon class with a space like this: 'weapon_molotov weapon_hegrenade'
