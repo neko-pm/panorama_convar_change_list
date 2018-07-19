@@ -13,6 +13,7 @@
 #8 | `no changes` | 5141769107752222741 | 156167390716622482 | 3279608506474101147 | 1635670109153791249
 #9 | `no changes` | 8139772752673722378 | 7684914088545844903 | 672667686695662229 | 3652509694349601520
 #10 | `no changes` | 5377270489180172776 | 6501569695347594971 | 8794214015261907017 | 7506976101573537505
+#11 | https://github.com/neko-pm/panorama_convar_change_list/commit/c9c920f1dd1b0dbdd4290d23c056191a8f930a6f | 3141828755177817796 | 3667327721082092399 | 3265309052814340138 | 6830656857022386436
 
 ### Credits
 Information dumped with a slightly modified version of https://github.com/saul/csgo-cvar-unhide
@@ -126,6 +127,7 @@ launch_warmup_map                         | cmd      |  | "FCVAR_CLIENTDLL", "FC
 mat_draw_resolution                       | convar   | 0        | "FCVAR_CHEAT"    | 
 mat_flashlight_shadow_decal_indirectcolour_amount | convar   | 0.1      | "FCVAR_DEVELOPMENTONLY", "FCVAR_MATERIAL_SYSTEM_THREAD" | 
 mat_flashlight_shadow_decal_max_alpha     | convar   | 0.2      | "FCVAR_DEVELOPMENTONLY", "FCVAR_MATERIAL_SYSTEM_THREAD" | 
+mp_suicide_time                           | convar   | 5        | "FCVAR_GAMEDLL", "FCVAR_REPLICATED", "FCVAR_CHEAT" | Specifies number of seconds required to wait before another suicide.
 pan_asynctext                             | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
 pan_disabletextshadowcache                | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
 pan_dx                                    | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
