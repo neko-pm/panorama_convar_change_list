@@ -15,6 +15,8 @@
 #10 | `no changes` | 5377270489180172776 | 6501569695347594971 | 8794214015261907017 | 7506976101573537505
 #11 | https://github.com/neko-pm/panorama_convar_change_list/commit/c9c920f1dd1b0dbdd4290d23c056191a8f930a6f | 3141828755177817796 | 3667327721082092399 | 3265309052814340138 | 6830656857022386436
 #12 | `no changes` | 5888885226294545632 | 1324984979981522192 | 5027656247815314328 | 4383912241144985002
+#13 | https://github.com/neko-pm/panorama_convar_change_list/commit/754d26eded57054eab36f4abb0dd559086c7d3fb | 3947016988236021661 | 7553880414848117695 | 2630159404421007383 | 7917239813566707667
+#14 | `no changes` | 1116316516305889907 | 330510299507123372 | 2884688263518575699 | 8004428735576788301
 
 ### Credits
 Information dumped with a slightly modified version of https://github.com/saul/csgo-cvar-unhide
@@ -88,7 +90,7 @@ Name | Type | Default Value | Flags | Description
 @panorama_show_fps                        | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
 @panorama_simple_borders_no_comp_layer    | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
 @panorama_sound_pos                       | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
-@panorama_sound_pos_dist                  | convar   | 2.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_sound_pos_dist                  | convar   | -2.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
 @panorama_sound_pos_show                  | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
 @panorama_spew_layout_invalidates         | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
 @panorama_steampad_button_repeat_curve_time | convar   | .5       | "FCVAR_DEVELOPMENTONLY" | 
