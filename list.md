@@ -176,7 +176,7 @@ Name | Type | Default Value | Flags | Description
 @panorama_show_fps                        | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
 @panorama_simple_borders_no_comp_layer    | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
 @panorama_sound_pos                       | convar   | 1        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
-@panorama_sound_pos_dist                  | convar   | 2.0      | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
+@panorama_sound_pos_dist                  | convar   | -2.0     | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
 @panorama_sound_pos_show                  | convar   | 0        | "FCVAR_DEVELOPMENTONLY", "FCVAR_CHEAT" | 
 @panorama_spew_layout_invalidates         | convar   | 0        | "FCVAR_DEVELOPMENTONLY" | 
 @panorama_steampad_button_repeat_curve_time | convar   | .5       | "FCVAR_DEVELOPMENTONLY" | 
